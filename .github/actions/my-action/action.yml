@@ -1,12 +1,18 @@
 name: "My action"
 description: "Test my action"
 
+inputs:
+  message:
+    description: "Mensaje a mostrar"
+    required: true
+    default: "Hola Mundo"
+
 runs:
   using: "composite"
 
   steps:
   - name: "Hola Mundo desde action.yml"
-    run: echo "Hola Mundo desde action.yml"
+    run: echo "Hola ${{ inputs.message }}"
     shell: bash
 
     
