@@ -1,0 +1,10 @@
+name: "My action"
+description: "Test my action"
+
+runs:
+  using: "composite"
+
+steps:
+  - name: "Hola Mundo desde action.yml"
+    run: echo "Hola Mundo desde action.yml"
+    shell: bash

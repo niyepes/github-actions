@@ -1,0 +1,13 @@
+name: Test composite action
+
+on : [push]
+
+jobs:
+  local-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v4.1.7
+
+      - name: "ls"
+        uses: ./.github/actions/my-action 
