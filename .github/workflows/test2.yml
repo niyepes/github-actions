@@ -25,4 +25,4 @@ jobs:
           - name: test
             env:
                 MY_STEP_VAR: "Variable en step"
-            run: echo "${MY_STEP_VAR} y ${MY_VAR}"
+            run: echo "${MY_STEP_VAR} , ${MY_VAR} y ${vars.MY_VAR_2}"
