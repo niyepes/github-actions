@@ -8,3 +8,9 @@ jobs:
         steps:
             - name: "Imprimir Hola Mundo"
               run: echo "Hola Mundo"
+
+    job2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "ls"
+              run: ls -la
