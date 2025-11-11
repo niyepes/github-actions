@@ -4,7 +4,7 @@ description: "Test my action"
 runs:
   using: "composite"
 
-steps:
+  steps:
   - name: "Hola Mundo desde action.yml"
     run: echo "Hola Mundo desde action.yml"
     shell: bash
