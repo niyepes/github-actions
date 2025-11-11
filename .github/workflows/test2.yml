@@ -26,3 +26,7 @@ jobs:
             env:
                 MY_STEP_VAR: "Variable en step"
             run: echo "Variable del repositorio ${{ vars.MY_VAR_2 }}"
+
+         
+          - name: secrets
+            run: echo "Secreto ${{ secrets.SECRET_1}}"
