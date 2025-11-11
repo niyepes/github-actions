@@ -23,4 +23,6 @@ jobs:
                     - 6379:6379
         steps:
           - name: test
-            run: echo "${MY_VAR}"
+            env:
+                MY_STEP_VAR: "Variable en step"
+            run: echo "${MY_STEP_VAR} y ${MY_VAR}"
