@@ -5,6 +5,9 @@ on : push
 jobs:
     servicios:
         runs-on: ubuntu-latest
+
+        env:
+            MY_VAR: "Valor de ejemplo"
         
         services:
             mysql:
@@ -20,4 +23,4 @@ jobs:
                     - 6379:6379
         steps:
           - name: test
-            run: ls
+            run: echo "${MY_VAR}"
