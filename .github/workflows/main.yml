@@ -13,3 +13,14 @@ jobs:
         uses: ./.github/actions/my-action 
         with:
           message: "desde workflow"
+
+  local-action-ssh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ls
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" >> ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh keyscan -H 127.0.0.1 >> ~/.ssh/known_hosts
+          cat ~/.ssh/known_hosts
